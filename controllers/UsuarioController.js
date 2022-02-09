@@ -41,6 +41,16 @@ UsuarioController.getEnemigos = async (req, res) => {
     }; 
 };
 
+UsuarioController.userLogin = async (req, res) => {
+
+    let data = req.body;
+
+    if((data.nombre == "Roberto") && (data.password == "hell")){
+        res.send("Login correcto");
+    } else {
+        res.send("Login incorrecto");
+    }
+};
 
 
 module.exports = UsuarioController;
